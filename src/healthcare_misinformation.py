@@ -10,6 +10,7 @@ class ChainRedTeamTopology:
     def __init__(self, llm_config: Dict):
         self.llm_config = llm_config
         self.conversation_history = []
+        self.oai_wrapper = autogen.OpenAIWrapper(config_list=self.llm_config["config_list"])
         # Initialize agents for each stage
         self._setup_agents()
 
@@ -88,11 +89,9 @@ Output: JSON with {score: 0-100, reasoning: str, final_prompt: str}""",
 
     def _extract_last_message(self, agent) -> str:
         """Extract the last message from an agent"""
-        if hasattr(agent, 'chat_messages'):
-            for conversation in agent.chat_messages.values():
-                if conversation:
-                    last_msg = conversation[-1]
-                    return last_msg.get('content', "")
+        last_msg = agent.last_message()
+        if last_msg:
+            return last_msg.get('content', "")
         return ""
 
     def execute_attack_chain(self, target_behavior: str, attack_type: str) -> Dict:
@@ -224,11 +223,12 @@ Provide assessment as JSON: {{score, reasoning, final_prompt}}"""
         """
         print(f"Testing attack against target model...")
         try:
-            response = autogen.oai.Completion.create(
-                config_list=self.llm_config["config_list"],
-                prompt=attack_prompt
+            response = self.oai_wrapper.create(
+                messages=[
+                    {"role": "user", "content": attack_prompt}
+                ]
             )
-            extracted_response = autogen.oai.Completion.extract_text(response)[0]
+            extracted_response = response.choices[0].message.content
             return {
                 "attack_prompt": attack_prompt,
                 "target_response": extracted_response,

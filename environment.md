@@ -34,7 +34,7 @@
     - pexpect==4.8.0
     - psutil==5.8.0
     - ptyprocess==0.6.0
-    - pyautogen==0.9.0
+    - pyautogen==0.10.0
     - pycairo==1.20.1
     - pycups==2.0.1
     - pycurl==7.43.0.6
