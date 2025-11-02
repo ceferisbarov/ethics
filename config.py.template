@@ -1,0 +1,7 @@
+# Rename this file to config.py and add your API keys
+
+API_KEYS = {
+    "openai": "YOUR_OPENAI_API_KEY",
+    "claude": "YOUR_CLAUDE_API_KEY",
+    "llama": "YOUR_LLAMA_API_KEY"
+}

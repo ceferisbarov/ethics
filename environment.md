@@ -1,0 +1,74 @@
+# Environment Configuration
+
+## Software
+
+- **Python Version:** 3.10
+- **Libraries:**
+    - annotated-types==0.7.0
+    - anyio==4.11.0
+    - asyncer==0.0.8
+    - Brlapi==0.8.2
+    - certifi==2025.10.5
+    - chardet==4.0.0
+    - charset-normalizer==3.4.4
+    - cockpit @ file:///builddir/build/BUILD/cockpit-334.2/tmp/wheel/cockpit-334.2-py3-none-any.whl
+    - cupshelpers==1.0
+    - dasbus==1.4
+    - dbus-python==1.2.18
+    - diskcache==5.6.3
+    - distro==1.5.0
+    - docker==7.1.0
+    - exceptiongroup==1.3.0
+    - fail2ban==1.1.0
+    - file-magic==0.4.0
+    - gpg==1.15.1
+    - h11==0.16.0
+    - httpcore==1.0.9
+    - httpx==0.28.1
+    - idna==2.10
+    - libcomps==0.1.18
+    - lxml==4.6.5
+    - nftables==0.1
+    - packaging==20.9
+    - perf==0.1
+    - pexpect==4.8.0
+    - psutil==5.8.0
+    - ptyprocess==0.6.0
+    - pyautogen==0.9.0
+    - pycairo==1.20.1
+    - pycups==2.0.1
+    - pycurl==7.43.0.6
+    - pydantic==2.12.3
+    - pydantic_core==2.41.4
+    - pyenchant==3.2.0
+    - PyGObject==3.40.1
+    - pyinotify==0.9.6
+    - pyparsing==2.4.7
+    - PySocks==1.7.1
+    - python-dateutil==2.8.1
+    - python-dotenv==1.2.1
+    - python-linux-procfs==0.7.3
+    - pyudev==0.22.0
+    - pyxdg==0.27
+    - PyYAML==5.4.1
+    - regex==2025.10.23
+    - requests==2.32.5
+    - rpm==4.16.1.3
+    - selinux==3.6
+    - sepolicy==3.6
+    - setools==4.4.4
+    - setroubleshoot @ file:///builddir/build/BUILD/setroubleshoot-3.3.32/src
+    - six==1.15.0
+    - sniffio==1.3.1
+    - sos==4.10.0
+    - systemd-python==234
+    - termcolor==3.1.0
+    - tiktoken==0.12.0
+    - typing-inspection==0.4.2
+    - typing_extensions==4.15.0
+    - urllib3==1.26.5
+
+## Hardware
+
+- **CPU:**
+- **GPU:**
